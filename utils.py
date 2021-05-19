@@ -3,7 +3,6 @@ import os
 import secrets
 
 from colorblind.recolor import Core
-from models import UpdatedPhoto
 
 
 class RequestFileSaver:
