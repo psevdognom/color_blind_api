@@ -48,19 +48,33 @@ class App extends Component {
 
 
     press(){
-        let list = document.getElementsByClassName('image');
-    for (let val of list)
-    console.log(val);
+    //     let list = document.getElementsByClassName('image');
+    // for (let val of list)
+    // console.log(val);
+
+    const fileInput = document.querySelector('image') ;
+    const formData = new FormData();
+
+    formData.append('photo', fileInput.files[0],'pic1');
+
+    const options = {
+      method: 'POST',
+      body: formData,
+    };
+
+fetch('localhost:8080/images/format', options);
+
+
         // var formdata = new FormData();
         // formdata.append("image", val, "[PROXY]");
         //
         // var requestOptions = {
-        //   method: 'POST',
+        //    method: 'POST',
         //   body: formdata,
         //   redirect: 'follow'
         // };
         //
-        // fetch("127.0.0.1:8080/images/format", requestOptions)
+        // fetch("localhost:8080/images/format", requestOptions)
         //   .then(response => response.text())
         //   .then(result => console.log(result))
         //   .catch(error => console.log('error', error));
