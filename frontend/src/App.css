@@ -1,0 +1,67 @@
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
+
+/*.App-header {*/
+/*  background-color: #282c34;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
+
+/*.App-link {*/
+/*  color: #61dafb;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+.main-content {
+    margin: auto;
+}
+.header {
+    /*display:flex;*/
+    /*justify-content: space-between;*/
+    horizontal-align: middle;
+    padding: 15px;
+    background: #689CD2;
+    color: #fff;
+    font-size: 250%;
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/*.header_text{*/
+/*    font-weight: bold;*/
+/*    align-items: center;*/
+/*    font-family: Helvetica;*/
+/*}*/
+.header_button {
+       /*display:flex;*/
+       float: right;
+       align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto;
+        padding: 2px;
+   }
+.icon{
+    vertical-align: middle;
+}
+    h1 {
+    font-family:  Helvetica;
+   }
+   p {
+    text-indent: 200px; /* Отступ первой строки в пикселах */
+   }
+ .brd {
+    border: 3px solid #000;  /* Чёрная рамка */
+	border-radius: 10px; /* Радиус скругления */
+   }
