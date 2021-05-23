@@ -51,8 +51,8 @@ class App extends Component {
         let list = document.getElementsByClassName('image');
     for (let val of list)
     console.log(val);
-        //         var formdata = new FormData();
-        // formdata.append("image", fileInput.files[0], "[PROXY]");
+        // var formdata = new FormData();
+        // formdata.append("image", val, "[PROXY]");
         //
         // var requestOptions = {
         //   method: 'POST',

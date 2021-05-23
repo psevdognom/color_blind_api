@@ -1,3 +1,5 @@
+import os
+
 from aiohttp import web
 
 from settings import FILES_DIR
@@ -5,7 +7,7 @@ from utils import RequestFileSaver
 
 routes = web.RouteTableDef()
 
-@routes.view('photo')
+@routes.view('images/format')
 class PhotoUpdateView(web.View):
 
     async def post(self):
@@ -24,7 +26,7 @@ class PhotoDownloadView(web.View):
 class ReactView(web.View):
 
     async def get(self):
-        return web.json_response({'hello': 'world'})
+        return web.FileResponse(os.path.join(os.path.dirname(__file__), 'frontend/public/index.html'))
 
 
 
