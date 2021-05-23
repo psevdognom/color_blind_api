@@ -18,7 +18,7 @@ async def make_app(middleware=None):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='API Server. API server MileOnAir Loyalty Programs\n')
+    parser = argparse.ArgumentParser(description='API Server. Colorblind\n')
     parser.add_argument('host', nargs='?', default='0.0.0.0', help='IP adress of api server')
     parser.add_argument('-p', '--port', nargs='?', default='8080', help='listening port')
     args = parser.parse_args()

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
 import icon from './icon.jpg';
 import pic1 from './pic1.PNG';
@@ -52,7 +53,9 @@ class App extends Component {
     // for (let val of list)
     // console.log(val);
 
-    const fileInput = document.querySelector('image') ;
+    const fileInput = ReactDOM.FindDOMNode()
+        document.querySelector('image');
+    console.log(fileInput.files);
     const formData = new FormData();
 
     formData.append('photo', fileInput.files[0],'pic1');
@@ -62,7 +65,7 @@ class App extends Component {
       body: formData,
     };
 
-fetch('localhost:8080/images/format', options);
+fetch('http://localhost:8080/images/format', options);
 
 
         // var formdata = new FormData();

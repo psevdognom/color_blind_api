@@ -13,7 +13,6 @@ class PhotoUpdateView(web.View):
     async def post(self):
         params = dict(await self.request.post())
         if params.get('photo'):
-            print(FILES_DIR)
             saver = RequestFileSaver('photo', FILES_DIR)
             filenames = await saver.save_files(self.request)
 

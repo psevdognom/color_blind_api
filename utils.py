@@ -8,7 +8,7 @@ from colorblind.recolor import Core
 
 class RequestFileSaver:
 
-    def     __init__(self, form_name, upload_folder):
+    def __init__(self, form_name, upload_folder):
         self._form_name = form_name
         self._upload_folder = upload_folder
 
