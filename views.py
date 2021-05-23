@@ -7,22 +7,23 @@ from utils import RequestFileSaver
 
 routes = web.RouteTableDef()
 
-@routes.view('images/format')
+@routes.view('/images/format')
 class PhotoUpdateView(web.View):
 
     async def post(self):
         params = dict(await self.request.post())
         if params.get('photo'):
+            print(FILES_DIR)
             saver = RequestFileSaver('photo', FILES_DIR)
             filenames = await saver.save_files(self.request)
 
-@routes.view('photo/download/{file_name}')
+@routes.view('/photo/download/{file_name}')
 class PhotoDownloadView(web.View):
 
     async def get(self):
         file_name = self.request.match_info['file_name']
 
-@routes.view('/')
+@routes.view('')
 class ReactView(web.View):
 
     async def get(self):

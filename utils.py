@@ -8,7 +8,7 @@ from colorblind.recolor import Core
 
 class RequestFileSaver:
 
-    def __init__(self, form_name, upload_folder):
+    def     __init__(self, form_name, upload_folder):
         self._form_name = form_name
         self._upload_folder = upload_folder
 
@@ -26,12 +26,13 @@ class RequestFileSaver:
                 else:
                     filename = secrets.token_urlsafe(64) + '.' + image.filename.split('.')[-1]
                     with open(os.path.join(self._upload_folder, filename), 'wb') as f:
+                        print(f)
                         f.write(image.file.read())
-                    filenames.append(os.path.join(self._upload_folder, filename))
+                filenames.append(os.path.join(self._upload_folder, filename))
         resp_filenames = []
         for filename in filenames:
             resp_filename = secrets.token_urlsafe(64) + '.png'
-            Core.simulate(filename, save_path=os.path.join(self._upload_folder,resp_filename))
+            Core.correct(filename, save_path=os.path.join(self._upload_folder,resp_filename))
             resp_filenames.append(filename)
 
         return filenames

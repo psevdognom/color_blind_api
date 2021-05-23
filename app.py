@@ -8,8 +8,9 @@ from views import routes as view_routes
 
 
 async def make_app(middleware=None):
-    app = web.Application(
+    app = web.Application(client_max_size=50*10485760
     )
+    app.router.add_routes([*view_routes])
     # запись логов в бд
     # await log_db.set_bind(f'postgresql+asyncpg://{a.DB_LOGS_USR}:{a.DB_LOGS_PASSWORD}@{a.DB_LOGS_HOST}/{a.DB_LOGS_NAME}')
     return app
