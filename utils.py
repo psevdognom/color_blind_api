@@ -1,6 +1,7 @@
 import os
 
 import secrets
+import hashlib
 
 from colorblind.recolor import Core
 
@@ -32,4 +33,5 @@ class RequestFileSaver:
             resp_filename = secrets.token_urlsafe(64) + '.png'
             Core.simulate(filename, save_path=os.path.join(self._upload_folder,resp_filename))
             resp_filenames.append(filename)
+
         return filenames
